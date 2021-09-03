@@ -1,0 +1,100 @@
+@import "color";
+
+main {
+  padding: 4em 1.8em;
+
+  .text-area {
+    text-align: center;
+    margin-bottom: 4em;
+
+    h1 {
+      font-size: clamp(1.6rem, 5vw, 2rem);
+      margin-bottom: 0.65em;
+
+      span {
+        font-weight: 200;
+        display: block;
+      }
+    }
+
+    p {
+      line-height: 1.6;
+      max-width: 542px;
+      margin: auto;
+    }
+  }
+
+  .card-area {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+    .card {
+      border-top: 4px solid $cyan;
+      padding: 1.7em;
+      border-radius: 8px;
+      max-width: 330px;
+      max-height: 246px;
+      box-shadow: 0px 10px 18px 2px rgba(0, 0, 0, 0.18);
+
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.3em;
+      }
+
+      p {
+        margin-bottom: 2.5em;
+      }
+
+      .card-img {
+        text-align: right;
+      }
+    }
+
+    .card-4 {
+      border-top: 4px solid $blue;
+    }
+
+    .two-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+
+      .card-2 {
+        border-top: 4px solid $red;
+      }
+
+      .card-3 {
+        border-top: 4px solid $orange;
+      }
+    }
+  }
+}
+
+footer {
+  .attribution {
+    font-size: clamp(12px, 5vw, 14px);
+    text-align: center;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+}
+
+@media (min-width: 968px) {
+  main {
+    .card-area {
+      .card {
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: translateY(-1em);
+        }
+      }
+    }
+  }
+}
